@@ -27,7 +27,12 @@
               >
                 <i class="text-white fa-solid fa-check"></i>
               </div>
-              <img src="@/assets/Svg/edit.svg" alt="" class="h-8 w-8" />
+              <img
+                @click="handleEdit(item)"
+                src="@/assets/Svg/edit.svg"
+                alt=""
+                class="h-8 w-8"
+              />
 
               <img
                 @click="deleteTask(item.id)"
@@ -78,7 +83,12 @@
         </div>
       </div>
     </div>
-    <EditTask :data="itemToEdit" :Overlay="Overlay" :closeModal="handleModal" />
+    <EditTask
+      v-if="Overlay"
+      :data="itemToEdit"
+      :Overlay="Overlay"
+      :closeModal="handleModal"
+    />
   </div>
 </template>
 <!-- eslint-disable -->
