@@ -26,8 +26,15 @@
               </div>
               <button
                 class="bg-green-500 rounded my-4 py-3 px-4 text-[12px] font-medium text-white"
-              >
-                Continue
+                     :class="loading ? 'cursor-not-allowed' : ''"
+            :disabled="loading"
+          >
+            <div
+              v-if="loading"
+              class="h-6 w-6 rounded-full border-4 border-t-[#fff] border-r-[#fff] border-b-[#ed323730] border-l-[#ed323730] animate-spin"
+            ></div>
+
+            <div v-else class="font-medium text-sm">Edit Task</div>
               </button>
             </div>
           </form>
@@ -46,6 +53,7 @@ export default {
   data() {
     return {
       name: "",
+      loading: false,
     };
   },
   mounted() {

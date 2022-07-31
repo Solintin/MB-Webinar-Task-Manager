@@ -43,7 +43,7 @@
             </div>
           </div>
         </div>
-        <div v-else class="text-red-500">No Task Added</div>
+        <div v-else class="text-red-500 text-center">No Task Added</div>
 
         <div class="mt-12">
           <p

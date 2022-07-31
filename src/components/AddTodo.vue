@@ -3,7 +3,7 @@
   <div class="my-2">
     <form @submit.prevent="addTask">
       <label for="title" class="font-bold">Title</label>
-      <div class="grid grid-cols-12 gap-2 my-2">
+      <div class="grid grid-cols-12 items-center gap-2 my-2">
         <div class="col-span-10">
           <input
             required
